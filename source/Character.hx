@@ -481,6 +481,25 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+                        case 'sonic.exe':
+				frames = Paths.getSparrowAtlas('characters/P2Sonic_Assets');
+				animation.addByPrefix('idle', 'NewPhase2Sonic Idle instance 1', 24, false);
+				animation.addByPrefix('singUP', 'NewPhase2Sonic Up instance 1', 24, false);
+				animation.addByPrefix('singDOWN', 'NewPhase2Sonic Down instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'NewPhase2Sonic Left instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'NewPhase2Sonic Right instance 1', 24, false);
+				animation.addByPrefix('laugh', 'NewPhase2Sonic Laugh instance 1', 24, false);
+
+				addOffset('idle', -18, 70);
+				addOffset("singUP", -4, 60);
+				addOffset("singRIGHT", 42, -127);
+				addOffset("singLEFT", 159, -105);
+				addOffset("singDOWN", -15, -57);
+				addOffset("laugh", 0, 0);
+
+				antialiasing = true;
+
+				playAnim('idle');
 		}
 
 		dance();
